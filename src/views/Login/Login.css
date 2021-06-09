@@ -1,0 +1,94 @@
+.scarf {
+    background: var(--v-primary-base);
+    position: absolute;
+    top: -2px;
+    left: 30px;
+    width: 85px;
+    height: 125px;
+    border-top: 1px solid var(--v-primary-darken2);
+    transition: height .7s;
+}
+
+.scarf:hover {
+    height: 280px;
+}
+
+.scarf > div {
+    position : absolute;
+}
+
+.scarf .middle {
+    border-style: solid;
+    border-width: 12px 6px 0 6px;
+    border-color: transparent;
+    border-top-color: var(--v-primary-base);
+    top: 100%;
+}
+
+.scarf .side {
+    border-style: solid;
+    top: 100%;
+}
+
+.side.left {
+    border-width: 12px 6px 0 0;
+    border-color: var(--v-primary-base) transparent transparent transparent;
+    left: 0;
+}
+
+.side.right {
+    border-width: 12px 0 0 6px;
+    border-color: var(--v-primary-base) transparent transparent transparent;
+    right: 0;
+}
+
+#login {
+    background-color: white;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 0;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 45px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 180px;
+}
+
+.title-login {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title-login:after, .title-login:before {
+    background-color: #777;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    width: 30%;
+}
+
+.title-login:before {
+    background-image: linear-gradient(left, #777, #fff 25%);
+    right: 0;
+    top: 50%;
+}
+
+.title-login:after {
+    background-image: linear-gradient(right, #777, #fff 25%);
+    left: 0;
+    top: 50%;
+}

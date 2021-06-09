@@ -1,0 +1,37 @@
+image: node:latest
+
+stages:
+  - install_f
+  - lint_f
+  - build_f
+  - publish
+
+cache:
+  paths:
+    - node_modules/
+    - public/
+
+install_front:
+  stage: install_f
+  script: npm i
+  artifacts:
+    paths:
+      - node_modules/
+
+lint_front:
+  stage: lint_f
+  script: npm run-script lint
+
+build_front:
+  stage: build_f
+  script: npm run-script build
+  artifacts:
+    paths:
+      - public/
+  cache:
+    paths:
+      - public/
+
+publishing_to_now:
+  stage: publish
+  script: npm run-script now

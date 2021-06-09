@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@types",
+      "src/global.d.ts",
+      "src/**/*.types.ts"
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017",
+      "es2018"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "server/**/*.types.ts",
+    "server/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
